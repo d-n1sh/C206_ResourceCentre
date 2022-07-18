@@ -156,7 +156,7 @@ public class ResourceCentreTest {
 		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0013", "8-8-2020" );
 		assertFalse("Test that non-esiting item is NOT ok to loan?", ok);
 
-
+//
 	}
 	
 	@Test
