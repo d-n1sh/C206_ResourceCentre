@@ -60,6 +60,7 @@ public class ResourceCentreTest {
 	public void testAddChromebook() {
 		//fail("Not yet implemented");
 		// write your code here 
+
 		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 		
 		//Given an empty list, after adding 1 item, the size of the list is 1
@@ -74,8 +75,23 @@ public class ResourceCentreTest {
 		ResourceCentre.addChromebook(chromebookList, cb3);
 		assertEquals("Test that Chromebook arraylist size is 3?", 3, chromebookList.size());
 		assertSame("Test that Chromebook is added same as 3rd item of the list?", cb3, chromebookList.get(2));
+
+		assertNotNull("Test if there is valid Camcorder arraylist to add to", chromebookList);
+		
+		//Given an empty list, after adding 1 item, the size of the list is 1
+		ResourceCentre.addChromebook(chromebookList, cb1);		
+		assertEquals("Test if that Camcorder arraylist size is 1?", 1, chromebookList.size());
+		
+		//The item just added is as same as the first item of the list
+		assertSame("Test that Camcorder is added same as 1st item of the list?", cb1, chromebookList.get(0));
+		
+		//Add another item. test The size of the list is 2?
+		ResourceCentre.addChromebook(chromebookList, cb2);
+		ResourceCentre.addChromebook(chromebookList, cb3);
+		assertEquals("Test that Camcorder arraylist size is 3?", 3, chromebookList.size());
+		assertSame("Test that Camcorder is added same as 3rd item of the list?", cb3, chromebookList.get(2));
+
 	}
-	
 	@Test
 	public void testRetrieveAllCamcorder() {
 		// Test if Item list is not null but empty, so that can add a new item
@@ -105,6 +121,7 @@ public class ResourceCentreTest {
 		//fail("Not yet implemented");
 		// write your code here
 		// Test if Item list is not null but empty, so that can add a new item
+
 				assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 				
 				//test if the list of chromebook retrieved from the SourceCentre is empty
@@ -126,7 +143,7 @@ public class ResourceCentreTest {
 				assertEquals("Check that ViewAllChromebooklist", testOutput, allChromebook);
 				
 	}
-
+	
 	@Test
 	public void testDoLoanCamcorder() {
 
@@ -211,6 +228,7 @@ public class ResourceCentreTest {
 	public void testDoReturnChromebook() {
 		//fail("Not yet implemented");
 		// write your code here
+
 		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 		ResourceCentre.addChromebook(chromebookList, cb1);
 		//error

@@ -148,6 +148,7 @@ public class ResourceCentre {
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
 		String output = "";
 		// write your code here
+
 		for (int i = 0; i < chromebookList.size(); i++) {
 
 			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(i).getAssetTag(),
@@ -299,6 +300,7 @@ public class ResourceCentre {
 			}
 		}
 		return isReturned;
+		
 	}
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
 		// write your code here
@@ -312,6 +314,5 @@ public class ResourceCentre {
 			System.out.println("Chromebook" + tag + " returned");
 		}
 	}
-
 
 }
